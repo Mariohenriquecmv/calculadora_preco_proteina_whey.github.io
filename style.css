@@ -27,6 +27,7 @@ header {
 header h1 {
     font-size: 2rem;
     color: #ffffff; /* Cor temática */
+    
 }
 
 /* Main Section */
@@ -40,68 +41,73 @@ main {
 
 #calculadora {
     background: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
-    padding: 20px;
+    padding: 0p;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     width: 90%;
-    max-width: 600px;
+    max-width: 45%;
     text-align: center;
+    align-items:center;
 }
 
 #calculadora h2 {
     font-size: 1.5rem;
     color: #333;
     margin-bottom: 10px;
+    margin-top: 8px;
 }
 
 .grid-container {
     display: grid; /* Define o contêiner como um grid container */
     grid-template-columns: repeat(2, 1fr); /* Cria duas colunas com largura igual */
     gap: 5px;
-    margin-left:7%;
+    margin-left: 5%;
     
 }
 
-#whey1, #whey2{
-    width: 45%; /* Define que cada div ocupará 45% da largura do contêiner */
-    padding: 10px; /* Adiciona um pouco de espaço dentro das divs */
-    box-sizing: border-box; /* Inclui padding no cálculo da largura */
-    
+#whey1, #whey2 {
+    display: flex;
+    flex-direction: column;  /* Empilha a label e o input verticalmente */
+    gap: 8px;  /* Adiciona um pequeno espaçamento entre a label e o input */
+    align-items: flex-start; /* Alinha à esquerda */
+    width: 100%; /* Garante que as divs ocupem 100% da largura do contêiner */
+    margin-left: 5%;
 }
 
 /*inicio campo do primeiro whey*/
 
-#whey1 label,#whey1 input{
-    display:flex;
-    margin-bottom: 8px;
+#whey1 label, #whey2 label {
+    margin-top: 8px;
+    margin-bottom: -1px;
     color: black;
-    width: 200px;
-    text-align: left;
-    
-
+    text-align: left; /* Garantir que o texto esteja alinhado à esquerda */
+    font-size: 1rem;
+    flex-grow: 1; /* Permite que a label ocupe todo o espaço disponível */
+    flex-shrink: 0; /* Não encolhe */
 }
 
 #whey1 input{
-    width: 200%;
+    width: 15em;
     height: auto;
 }
 #whey2 input{
-    width: 200%;
+    width: 15em;
     height: auto;
 }
 
 /*FIM campo do primeiro whey*/
 
-#whey2 label,#whey2 input{
-    display:flex;
-    margin-bottom: 8px;
+/*#whey2 label{
+    
+    margin-bottom: 2px;
+    margin-top: 8px;
     color: black;
-    width: 200px;
+    width: 200em;
     text-align:center;
     
     
 
-}
+}*/
 
 #resultado{
     width: 100%;
@@ -109,6 +115,9 @@ main {
     background-color: rgb(194, 255, 255);
     margin-top: 5px;
 
+}
+.resultado{
+    color: black;
 }
 
 /* inicio botao*/
@@ -125,7 +134,7 @@ main {
 #button{
     display: flex;
     justify-content: center;
-    margin-top: -5px;
+    margin-top: 12px;
     margin-bottom: 10px;
     
 }
