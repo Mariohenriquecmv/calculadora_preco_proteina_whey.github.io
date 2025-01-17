@@ -13,7 +13,7 @@ const primeiroProdutoids = { //criando objeto primeiro produto//
     peso: "#peso",
     porcao: "#porcao",
     proteina: "#proteina",
-    peco: "#preco",
+    preco: "#preco",
 };
 
 const segundoProdutoids = { //criando objeto segundo produto//
@@ -21,6 +21,25 @@ const segundoProdutoids = { //criando objeto segundo produto//
     peso: "#peso2",
     porcao: "#porcao2",
     proteina: "#proteina2",
-    peco: "#preco2",
+    preco: "#preco2",
 };
 
+//Funções para calculos//
+
+function proteinaPorEmbalagem(peso,porcao,proteina){
+    const porcoesTotais = peso / porcao;
+    const proteinaTotal = porcoesTotais * proteina;
+    return proteinaTotal
+}
+
+function valor100gProteina(preco,proteinaTotal){
+    const proteinaTotal = proteinaPorEmbalagem(peso,porcao,proteina);
+    const valor100g = (preco / proteinaTotal) * 100
+    return valor100g
+}
+
+// Função resultado //
+
+function resultado(){
+
+}
