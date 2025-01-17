@@ -14,6 +14,8 @@
             min-height: 100vh; /* Garante que o fundo cubra toda a altura da janela */
             display: flex;
             flex-direction: column;
+            margin: 0;
+            padding: 0;
         }
         
         /* Header */
@@ -41,20 +43,21 @@
         
         #calculadora {
             background: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
-            padding: 0%;
+            padding: 2%;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             width: 90%;
             max-width: 100%;
             text-align: center;
             align-items:center;
+            margin-top: 0%;
         }
         
         #calculadora h2 {
             font-size: 1.5rem;
             color: #333;
-            margin-bottom: 10px;
-            margin-top: 8px;
+            margin-bottom: 5%;
+            margin-top: 5%;
         }
         
         .grid-container {
@@ -134,7 +137,7 @@
             color: #ccc;
         }
         
-        /* ===RESPONSIVIDADE==== */
+         /* ===RESPONSIVIDADE==== */
         
         /* Para celulares menores (até 480px) */
         @media (max-width: 480px) {
@@ -186,5 +189,15 @@
             #button {
                 flex-direction: column; /* Alinha o botão verticalmente, caso necessário */
                 margin: 0; /* Remove margens extras */
+            }
+        }
+
+        @media (min-width: 390px) and (max-width: 1024px) {
+            header {
+                margin-bottom: 10px%; /* Remove a margem entre o header e o conteúdo */
+            }
+        
+            #calculadora {
+                margin-top: -45%; /* Remove margens extras para evitar espaços grandes */
             }
         }
