@@ -38,7 +38,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 0;
+            padding: 20px 0;
+            margin-top: 10px 0; /*voltar para zero se for o caso de erro na calculadora*/
         }
         
         #calculadora {
@@ -192,12 +193,14 @@
             }
         }
 
-        @media (min-width: 390px) and (max-width: 1024px) {
+        @media (min-width: 390px) and (max-width: 932px) { /* iphone medio grande*/
             header {
-                margin-bottom: 10px%; /* Remove a margem entre o header e o conteúdo */
+                margin-bottom: 5px; /* Remove a margem entre o header e o conteúdo */
             }
         
             #calculadora {
                 margin-top: -45%; /* Remove margens extras para evitar espaços grandes */
             }
         }
+
+        
