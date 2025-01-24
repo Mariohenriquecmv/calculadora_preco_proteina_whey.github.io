@@ -103,7 +103,7 @@
             display: flex;
             justify-content: center;
             align-items: center; /* Alinha o conteúdo centralizado */
-            line-height: 1.8; /* Aumenta o espaçamento entre as linhas */
+            line-height: 1.5; /* Aumenta o espaçamento entre as linhas */
         
         }
         .resultado{
@@ -209,4 +209,28 @@
             }
         }
 
-        
+        /* Responsividade para o #resultado */
+@media (max-width: 768px) {
+    #resultado {
+        width: 100%; /* Garantir que a largura ocupe 100% da tela */
+        padding: 10px; /* Ajuste de padding para melhor acomodação */
+        line-height: 1.2; /* Reduzir o espaçamento entre linhas */
+        word-wrap: break-word; /* Evitar que o texto ultrapasse a largura */
+    }
+
+    .resultado {
+        font-size: 1rem; /* Reduzir o tamanho da fonte para telas menores */
+        padding: 0 10px; /* Ajuste no padding interno */
+    }
+}
+
+/* Para telas muito pequenas, como celulares menores */
+@media (max-width: 480px) {
+    #resultado {
+        padding: 8px; /* Ajuste de padding para telas muito pequenas */
+    }
+    
+    .resultado {
+        font-size: 0.9rem; /* Font menor para acomodar o texto */
+    }
+}
