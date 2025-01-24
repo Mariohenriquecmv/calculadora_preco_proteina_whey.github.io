@@ -99,14 +99,20 @@
         #resultado{
             width: 100%;
             height: 50px;
-            background-color: rgb(194, 255, 255);
-            margin-top: 5px;
+            background-color: rgb(27, 62, 35);
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Alinha o conteúdo centralizado */
+            line-height: 1.8; /* Aumenta o espaçamento entre as linhas */
         
         }
         .resultado{
-            color: black;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
             max-width: 100%;
             text-align: center;
+            
+            
         }
         
         /* inicio botao*/
